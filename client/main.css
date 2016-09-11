@@ -1,0 +1,127 @@
+/* CSS declarations go here */
+
+.fade.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+.fade.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.fade.ng-enter-stagger {
+    /* 200ms will be applied between each sucessive enter operation */
+    transition-delay: 0.2s;
+    /* this is here to avoid accidental CSS inheritance */
+    transition-duration: 0;
+}
+
+.btn1 {
+    border-radius: 18px !important;
+}
+
+.info {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    color: #3a87ad;
+    background-color: #d9edf7;
+}
+
+.属性 {
+    border: 3px solid;
+    border-radius: 15px;
+    color: floralwhite;
+}
+
+.一般 {
+    border-color: #8A8A7B;
+    background-color: #BBBBAA;
+}
+
+.火 {
+    border-color: #BA1F00;
+    background-color: #FF4422;
+}
+
+.格斗 {
+    border-color: #912E1E;
+    background-color: #BB5544;
+}
+
+.水 {
+    border-color: #0D6AC8;
+    background-color: #3399FF;
+}
+
+.飞行 {
+    border-color: #3678FF;
+    background-color: #6699FF;
+}
+
+.草 {
+    border-color: #BDFFA3;
+    background-color: #77CC55;
+}
+
+.毒 {
+    border-color: #C689BA;
+    background-color: #AA5599;
+}
+
+.电 {
+    border-color: #FAE078;
+    background-color: #FFCC33;
+}
+
+.地面 {
+    border-color: #F1DDA0;
+    background-color: #DDBB55;
+}
+
+.超能力 {
+    border-color: #FF9CC4;
+    background-color: #FF5599;
+}
+
+.岩石 {
+    border-color: #E1D08C;
+    background-color: #BBAA66;
+}
+
+.冰 {
+    border-color: #13A8D9;
+    background-color: #77DDFF;
+}
+
+.虫 {
+    border-color: #849400;
+    background-color: #AABB22;
+}
+
+.龙 {
+    border-color: #31229D;
+    background-color: #7766EE;
+}
+
+.幽灵 {
+    border-color: #42428E;
+    background-color: #6666BB;
+}
+
+.恶 {
+    border-color: #442C21;
+    background-color: #775544;
+}
+
+.钢 {
+    border-color: #74747B;
+    background-color: #AAAABB;
+}
+
+.妖精 {
+    border-color: #FBCBFB;
+    background-color: #FFAAFF;
+}

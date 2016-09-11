@@ -1,0 +1,46 @@
+<md-dialog aria-label="Login" ng-cloak>
+
+    <md-toolbar>
+
+        <div class="md-toolbar-tools">
+
+            <h2 ng-show="loginModal.boolLoginRegister">Login</h2>
+            <h2 ng-hide="loginModal.boolLoginRegister">Register</h2>
+            <span flex></span>
+            <md-button ng-click="loginModal.close()" class="md-icon-button">
+                <md-icon>close</md-icon>
+            </md-button>
+
+        </div>
+
+    </md-toolbar>
+
+    <md-dialog-content>
+
+        <div class="md-dialog-content" layout="column">
+
+            <md-input-container class="md-input-has-placeholder">
+                <label>Username</label>
+                <input type="text" ng-model="loginModal.credentials.username" />
+            </md-input-container>
+            <md-input-container class="md-input-has-placeholder">
+                <label>Password</label>
+                <input type="password" ng-model="loginModal.credentials.password" />
+            </md-input-container>
+            <md-input-container class="md-input-has-placeholder" ng-hide="loginModal.boolLoginRegister">
+                <label>Repeat Password</label>
+                <input type="password" />
+            </md-input-container>
+
+        </div>
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout-align="space-between">
+        <md-button ng-click="loginModal.toggle()" class="md-primary" ng-show="loginModal.boolLoginRegister">No account?</md-button>
+        <md-button ng-click="loginModal.toggle()" class="md-primary" ng-hide="loginModal.boolLoginRegister">Have an account?</md-button>
+        <md-button ng-click="loginModal.login()" class="md-primary md-raised" ng-show="loginModal.boolLoginRegister">Login</md-button>
+        <md-button ng-click="loginModal.register()" class="md-primary md-raised" ng-hide="loginModal.boolLoginRegister">Register</md-button>
+    </md-dialog-actions>
+
+</md-dialog>

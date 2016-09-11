@@ -1,0 +1,7 @@
+<input type="text" ng-model="$ctrl.searchPokemon" />
+<md-button ng-click="$ctrl.searchPokedex()">Search Pokemon</md-button>
+
+<ul>
+    <li ng-repeat="type in $ctrl.result.types">{{type.type.name}}</li>
+</ul>
+<h1>{{$ctrl.result.types}}</h1>

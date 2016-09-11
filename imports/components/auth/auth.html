@@ -1,0 +1,11 @@
+<div ng-show="!$ctrl.currentUser">
+    <md-button ng-click="$ctrl.showLogin($event, false)">
+        Register
+    </md-button>
+    <md-button ng-click="$ctrl.showLogin($event, true)">
+        Log in
+    </md-button>
+</div>
+<md-button ng-show="$ctrl.currentUser" ng-click="$ctrl.logout()">
+    Log out
+</md-button>
