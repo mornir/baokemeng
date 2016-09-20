@@ -15,9 +15,23 @@
 <div flex layout="row" layout-align="center" layout-wrap>
 
     <div flex="15" flex-md="20" flex-sm="25" flex-xs="30" ng-repeat="pokemon in $ctrl.pokemons" class="fade">
-        <md-card ui-sref="pokedetails({ pokeId: pokemon.nameCN })">
-            <img ng-src="{{pokemon.nameFR}}.png" class="md-card-image" alt="{{pokemon.nameCN}}">
+        <md-card class="card-style">
+            <a ui-sref="pokedetails({ pokeId: pokemon.nameCN})">
+                <img ng-src="http://www.pokemon-sunmoon.com/media/uploads/pokemon_grid_images/{{pokemon.link | lowercase }}.png" class="md-card-image" alt="{{pokemon.nameCN}}">
+            </a>
         </md-card>
     </div>
 
 </div>
+
+<!--
+<div layout-padding>
+    <md-grid-list md-cols="6" md-cols-md="5" md-cols-sm="4" md-cols-xs="2" md-gutter="12px" md-row-height="212px">
+        <md-grid-tile class="card-style" ng-repeat="pokemon in $ctrl.pokemons">
+
+            <img md-whiteframe ng-src="http://www.pokemon-sunmoon.com/media/uploads/pokemon_grid_images/{{pokemon.link | lowercase }}.png" alt="{{pokemon.nameCN}}" ui-sref="pokedetails({ pokeId: pokemon.nameCN})">
+
+        </md-grid-tile>
+    </md-grid-list>
+</div>
+-->

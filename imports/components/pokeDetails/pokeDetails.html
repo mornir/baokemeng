@@ -1,31 +1,29 @@
-<br>
-<div flex layout="row" layout-align="center">
-    <div flex flex-sm="80" flex-gt-sm="50" layout="column">
-        <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <div layout="row" layout-align="space-between">
-                        <span class="md-display-2">{{$ctrl.pokemon.nameCN}}</span>
-                        <md-button ng-click="$ctrl.toggleFavorite()" class="md-icon-button" ng-class="{'md-accent':  $ctrl.isFavorite || $ctrl.localBool }" aria-label="Favorite">
-                            <md-icon>favorite</md-icon>
-                        </md-button>
-                    </div>
-                    <span class="md-subhead">{{$ctrl.pokemon.nameFR}}</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content layout="column" layout-align="center center">
-                <img ng-src="{{$ctrl.pokemon.nameFR}}.png" class="md-media-xl card-media" alt="{{$ctrl.pokemon.nameCN}}">
-                <br>
-                <div layout="row">
-                    <div ng-repeat="type in $ctrl.pokemon.types">
-                        <span class="md-display-1 属性 {{type}}">{{type}}</span>
-                        <span ng-if="$first">&nbsp</span>
-                    </div>
-                </div>
-                <!--<md-card-actions layout="column">
-                </md-card-actions>-->
-            </md-card-content>
-        </md-card>
-        <md-button class="md-primary md-raised btn1" ui-sref="home">Retour</md-button>
+<div flex layout="row" layout-align="center" layout-padding>
+
+
+    <div flex="50" layout="row">
+        <div flex layout="column" layout-align="center end">
+            <img md-whiteframe flex="50" ng-src="http://www.pokemon-sunmoon.com/media/uploads/pokemon_grid_images/{{$ctrl.pokemon.link | lowercase }}.png" alt="{{$ctrl.pokemon.nameCN}}">
+        </div>
     </div>
+
+    <div flex="50" layout="column" layout-align="center">
+
+        <table md-whiteframe>
+            <tr>
+                <th>Name EN</th>
+                <td>Smith</td>
+
+            </tr>
+            <tr>
+                <th>Name FR</th>
+                <td>Jackson</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+<div layout="row" layout-align="center">
+    <md-button flex="25" class="md-primary md-raised btn1" ui-sref="home">Retour</md-button>
 </div>

@@ -4,19 +4,31 @@
     <link rel="icon" href="/favicon.png" type="image/vnd.microsoft.icon" sizes="16x16 32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc2/angular-material.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
 
 <body ng-app="baokemeng" ng-strict-di="" layout="column">
 
-    <toolbar></toolbar>
 
     <md-content flex layout="column">
+
+        <div layout="row" layout-align="space-around center">
+            <md-button class="md-icon-button logo">
+                <img class="logo-image" src="pokédex.png">
+            </md-button>
+
+            <img flex="20" ui-sref="home" href="" src="Sun_Version.png" alt="精灵宝可梦太阳">
+
+            <span flex="5"></span>
+
+            <img flex="20" src="Moon_Version.png" alt="精灵宝可梦月亮">
+
+            <md-button class="md-raised md-accent">Log in</md-button>
+        </div>
 
         <ui-view flex layout="column"></ui-view>
 
     </md-content>
-
-
 
 
 </body>
