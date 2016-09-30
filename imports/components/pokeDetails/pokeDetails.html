@@ -1,4 +1,4 @@
-<div flex layout="row" layout-align="center" layout-padding>
+<div flex layout-gt-sm="row" layout-xs="column" layout-align="center" layout-padding>
 
 
     <div flex="50" layout="row">
@@ -7,20 +7,37 @@
         </div>
     </div>
 
-    <div flex="50" layout="column" layout-align="center">
+    <div flex="50" layout="row" layout-align="start center">
 
-        <table md-whiteframe>
-            <tr>
-                <th>Name EN</th>
-                <td>Smith</td>
+        <md-card flex="50" class="card-style-details">
+            <md-card-content>
+                <div layout="row" layout-align="space-between">
+                    <span class="md-display-1">{{$ctrl.pokemon.nameCN}}</span>
+                    <md-button class="md-icon-button" aria-label="icon">
+                        <md-icon>favorite</md-icon>
+                    </md-button>
+                </div>
+                <hr>
+                <div layout="column" layout-padding>
+                    <div layout="row" layout-align="start center">
+                        <img src="french.png" height="30" width="30">
+                        <span class="md-headline">{{$ctrl.pokemon.nameFR}}</span>
+                    </div>
+                    <div layout="row" layout-align="start center">
+                        <img src="english.png" height="30" width="30">
+                        <span class="md-headline">{{$ctrl.pokemon.nameEN}}</span>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <div ng-repeat="type in $ctrl.pokemon.types">
+                            <span ng-if="$last">&nbsp&nbsp</span>
+                            <span class="md-headline 属性 {{type}}">{{type}}</span>
+                        </div>
 
-            </tr>
-            <tr>
-                <th>Name FR</th>
-                <td>Jackson</td>
-            </tr>
-        </table>
+                    </div>
 
+                </div>
+            </md-card-content>
+        </md-card>
     </div>
 
 </div>

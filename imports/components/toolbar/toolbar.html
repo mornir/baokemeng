@@ -1,15 +1,15 @@
-<md-toolbar>
-    <div class="md-toolbar-tools">
-        <md-button class="md-icon-button">
-            <md-icon>menu</md-icon>
-        </md-button>
+<div layout="row" layout-align="space-around center">
+    <md-button class="md-icon-button logo" ui-sref="pokedex">
+        <img class="logo-image" src="pokédex.png">
+    </md-button>
 
-        <!--
-        <span flex></span>
-        <auth></auth>
-        <md-button>
-            About
-        </md-button>-->
+    <img flex="20" ui-sref="home" src="Sun_Version.png" alt="精灵宝可梦太阳">
 
-    </div>
-</md-toolbar>
+    <span flex="5"></span>
+
+    <img flex="20" src="Moon_Version.png" alt="精灵宝可梦月亮">
+
+    <md-button class="md-icon-button" ui-sref="home">
+        <md-icon class="material-icons" ng-click="$ctrl.showLogin($event, true)">account_circle</md-icon>
+    </md-button>
+</div>

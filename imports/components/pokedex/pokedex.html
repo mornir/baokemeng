@@ -1,7 +1,73 @@
-<input type="text" ng-model="$ctrl.searchPokemon" />
-<md-button ng-click="$ctrl.searchPokedex()">Search Pokemon</md-button>
+<!--<div layout="column" layout-align="center center" layout-padding>
+    <div flex="20" layout="row">
+        <div flex="50">
+            <md-input-container class="card-style-details">
+                <label>Enter Pokemon name</label>
+                <input type="text" ng-model="$ctrl.searchPokemon">
+            </md-input-container>
+        </div>
+        <div flex="50">
+            <md-button class="md-raised" ng-click="$ctrl.searchPokedex()">Search Pokemon</md-button>
+        </div>
+    </div>
+    <div flex="80" layout="row" layout-align="start center">
+        <!-- <ul>
+            <li ng-repeat="type in $ctrl.result.types">{{type.type.name}}</li>
+        </ul>
+        <h1 ng-if="!$ctrl.result">hello</h1>
+       <h1>{{$ctrl.result.types}}</h1>-->
+<!--
+        <md-card flex class="card-style-details">
+            <md-card-content>
+                <span class="md-display-1">Pikachu</span>
+                <hr>
 
-<ul>
-    <li ng-repeat="type in $ctrl.result.types">{{type.type.name}}</li>
-</ul>
-<h1>{{$ctrl.result.types}}</h1>
+                <div layout="row" layout-align="center center">
+                    <div ng-repeat="type in $ctrl.pokemon.types">
+                        <span ng-if="$last">&nbsp&nbsp</span>
+                        <span class="md-headline 属性 {{type}}">{{type}}</span>
+                    </div>
+
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
+-->
+<div flex layout="row" layout-align="center" layout-padding>
+
+
+    <div flex="50" layout="row">
+        <div flex layout="column" layout-align="center end">
+            <h1>Pokédex (beta)</h1>
+            <md-input-container class="card-style-details">
+                <label>Enter Pokemon name</label>
+                <input type="text" ng-model="$ctrl.searchPokemon">
+            </md-input-container>
+            <md-button class="md-raised" ng-click="$ctrl.searchPokedex()">Search Pokemon</md-button>
+        </div>
+    </div>
+
+    <div flex="50" layout="row" layout-align="start center">
+
+        <md-card flex="50" class="card-style-details">
+            <md-card-content>
+
+                <span class="md-display-1 majuscule">{{$ctrl.result.name}}</span>
+
+                <hr>
+                <div layout="column" layout-padding>
+
+                    <div layout="row" layout-align="center center">
+                        <div ng-repeat="type in $ctrl.result.types">
+                            <span ng-if="$last">&nbsp&nbsp</span>
+                            <span class="md-headline 属性">{{type.type.name}}</span>
+                        </div>
+
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+
+</div>

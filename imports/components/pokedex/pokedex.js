@@ -10,12 +10,13 @@ class Pokedex {
     constructor(pokeapi) {
         'ngInject';
         this.searchPokemon = '';
-        this.result = 'Null';
+        this.result = '';
         this.Pokeapi = pokeapi;
     }
 
     searchPokedex() {
-        this.result = this.Pokeapi.getPokemonbyName(this.searchPokemon);
+
+        this.result = this.Pokeapi.getPokemonbyName(this.searchPokemon.toLowerCase());
     }
 
 
