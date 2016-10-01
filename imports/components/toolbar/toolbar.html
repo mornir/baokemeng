@@ -1,15 +1,15 @@
 <div layout="row" layout-align="space-around center">
-    <md-button class="md-icon-button logo" ui-sref="pokedex">
-        <img class="logo-image" src="pokédex.png">
-    </md-button>
 
-    <img flex="20" ui-sref="home" src="Sun_Version.png" alt="精灵宝可梦太阳">
+    <img flex-gt-sm="5" flex="10" class="pokedex-image" src="pokédex.png" ui-sref="pokedex">
+
+    <img flex-gt-sm="20" flex="25" ui-sref="home" src="Sun_Version.png" alt="精灵宝可梦太阳">
 
     <span flex="5"></span>
 
-    <img flex="20" src="Moon_Version.png" alt="精灵宝可梦月亮">
+    <img flex-gt-sm="20" flex="25" src="Moon_Version.png" alt="精灵宝可梦月亮">
 
-    <md-button class="md-icon-button" ui-sref="home">
-        <md-icon class="material-icons" ng-click="$ctrl.showLogin($event, true)">account_circle</md-icon>
+    <md-button class="md-icon-button md-accent" ui-sref="home">
+        <md-icon ng-hide="$ctrl.isLoggedIn" ng-click="$ctrl.showLogin($event, true)">account_circle</md-icon>
+        <md-icon ng-show="$ctrl.isLoggedIn" ng-click="$ctrl.logout()">power_settings_new</md-icon>
     </md-button>
 </div>

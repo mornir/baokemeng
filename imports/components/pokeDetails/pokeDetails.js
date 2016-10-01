@@ -103,6 +103,6 @@ function config($stateProvider) {
     $stateProvider
         .state('pokedetails', {
             url: '/pokedetails/:pokeId',
-            template: '<poke-test flex layout="column"></poke-test>'
+            template: '<poke-test flex layout-gt-xs="column" ></poke-test>'
         });
 }

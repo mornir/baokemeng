@@ -1,20 +1,15 @@
-<div flex layout-gt-sm="row" layout-xs="column" layout-align="center" layout-padding>
+<div flex layout="column" layout-align="center center">
 
+    <div layout="row" layout-xs="column" layout-align="center center">
 
-    <div flex="50" layout="row">
-        <div flex layout="column" layout-align="center end">
-            <img md-whiteframe flex="50" ng-src="http://www.pokemon-sunmoon.com/media/uploads/pokemon_grid_images/{{$ctrl.pokemon.link | lowercase }}.png" alt="{{$ctrl.pokemon.nameCN}}">
-        </div>
-    </div>
+        <img md-whiteframe flex="50" flex-xs="90" ng-src="http://www.pokemon-sunmoon.com/media/uploads/pokemon_grid_images/{{$ctrl.pokemon.link | lowercase }}.png" alt="{{$ctrl.pokemon.nameCN}}">
 
-    <div flex="50" layout="row" layout-align="start center">
-
-        <md-card flex="50" class="card-style-details">
+        <md-card flex="50" flex-xs="100" class="card-style-details">
             <md-card-content>
                 <div layout="row" layout-align="space-between">
                     <span class="md-display-1">{{$ctrl.pokemon.nameCN}}</span>
-                    <md-button class="md-icon-button" aria-label="icon">
-                        <md-icon>favorite</md-icon>
+                    <md-button class="md-icon-button" aria-label="icon" ng-click="$ctrl.toggleFavorite()">
+                        <md-icon ng-class="$ctrl.localBool || $ctrl.isFavorite  ? 'md-accent' : ''">favorite</md-icon>
                     </md-button>
                 </div>
                 <hr>
@@ -39,7 +34,6 @@
             </md-card-content>
         </md-card>
     </div>
-
 </div>
 <div layout="row" layout-align="center">
     <md-button flex="25" class="md-primary md-raised btn1" ui-sref="home">Retour</md-button>

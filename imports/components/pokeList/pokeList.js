@@ -26,15 +26,19 @@ class PokeList {
         this.FavoriteListService = FavoriteListService;
 
         this.tags = [{
+                id: 0,
                 name: '所有的'
         },
             {
+                id: 1,
                 name: '传说的'
         },
             {
+                id: 2,
                 name: '最初同伴的'
                 },
             {
+                id: 3,
                 name: '最喜欢的'
 
         }];
@@ -53,13 +57,12 @@ class PokeList {
                 }
         });
     }
-
     toggleTag(index) {
 
-        this.activeBtn = index;
+        this.activeBtn = parseInt(index);
         let selector = {};
 
-        switch (index) {
+        switch (this.activeBtn) {
         case 0:
             selector = {};
             break;
